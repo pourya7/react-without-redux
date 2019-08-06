@@ -1,0 +1,29 @@
+.form-field {
+  display: block;
+  width: 100%;
+
+  background-color: transparent;
+
+  box-shadow: none;
+  border: none;
+
+  outline: none;
+
+  padding: 8px;
+  margin-bottom: 16px;
+
+  font-size: inherit;
+  font-weight: 300;
+
+  &::placeholder {
+    color: $grey-5;
+  }
+}
+
+.form-error {
+  font-size: 10px;
+  font-weight: 600;
+  color: $red-1;
+
+  margin-top: 16px;
+}

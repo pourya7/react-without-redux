@@ -1,0 +1,25 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+
+  font-family: $base-font-family;
+  font-size: 1rem;
+  font-weight: 400;
+
+  line-height: 1.5;
+
+  color: $base-color;
+
+  text-align: left;
+
+  background-color: $base-bg-color;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
