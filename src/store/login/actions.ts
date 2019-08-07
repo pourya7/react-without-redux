@@ -28,14 +28,12 @@ export function handleLogin(userName: string, listName: string) {
 		try {
 			await fakeLogin(userName, listName);
 			dispatch(success(userName, listName));
-			window.localStorage.setItem('USER', userName);
 		} catch (error) {
 			dispatch(failed(error.response.data));
-			window.localStorage.removeItem('USER');
 		}
 	};
 
-	// return function (dispatch: any) {
+	// return function (dispatch: any, state: any) {
 	// 	dispatch(login());
 	// 	return fakeLogin(userName, listName)
 	// 		.then((result: any) => {
@@ -50,7 +48,6 @@ export function handleLogin(userName: string, listName: string) {
 }
 
 export function handleLogout() {
-	window.localStorage.removeItem('USER');
 	return {
 		type: LOGIN.TERMINATE
 	};

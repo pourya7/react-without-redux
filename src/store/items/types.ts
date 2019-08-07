@@ -7,8 +7,7 @@ export interface IItems {
 }
 
 export enum ITEMS {
-	ADD = 'ADD',
-	DELETE = 'DELETE',
-	RESET = 'RESET',
-	COMPLETE = 'COMPLETE'
+	ADD = 'ITEMS_ADD',
+	RESET = 'ITEMS_RESET',
+	COMPLETE = 'ITEMS_COMPLETE'
 }

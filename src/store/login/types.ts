@@ -7,8 +7,8 @@ export interface ILogin {
 }
 
 export enum LOGIN {
-	INIT = 'INIT',
-	SUCCESS = 'SUCCESS',
-	ERROR = 'ERROR',
-	TERMINATE = 'TERMINATE'
+	INIT = 'LOGIN_INIT',
+	SUCCESS = 'LOGIN_SUCCESS',
+	ERROR = 'LOGIN_ERROR',
+	TERMINATE = 'LOGIN_TERMINATE'
 }

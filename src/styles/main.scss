@@ -3,14 +3,10 @@
 @import './base';
 @import './form';
 
-// App
-@import '/app';
+// Atoms
+@import '../atoms/Button/Button';
 
 // Components
-@import '../components/Button/button';
-@import '../components/Card/card';
-@import '../components/TodoItem/todoItem';
-@import '../components/TodoList/todoList';
-
-// Containers
-@import '../containers/Dashboard/dashboard';
+@import '../components/App/App';
+@import '../components/Login/Login';
+@import '../components/Todos/Todos';

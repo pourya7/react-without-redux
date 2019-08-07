@@ -5,7 +5,7 @@ export const initialState: ILogin = {
 	userName: '',
 	listName: '',
 	isLoading: false,
-	isLoggedIn: !!window.localStorage.getItem('USER'),
+	isLoggedIn: false,
 	error: ''
 }
 

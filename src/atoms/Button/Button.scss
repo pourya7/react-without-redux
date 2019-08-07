@@ -3,7 +3,6 @@
   align-items: center;
   justify-content: center;
 
-  min-width: 80px;
   height: 30px;
 
   background-color: $white;
@@ -31,12 +30,12 @@
 }
 
 .button-primary {
-  background-color: $orange-1;
-  background-image: linear-gradient(to right, $orange-1, $red-1);
+  background-color: $orange;
+  background-image: linear-gradient(to right, $orange, $red);
 
   color: $white;
 
-  box-shadow: 1px 2px 4px 0 rgba($red-1, 0.5);
+  box-shadow: 1px 2px 4px 0 rgba($red, 0.5);
 }
 
 .button-large {
@@ -67,7 +66,7 @@
 
   border: 2px solid #f3f3f3;
   border-radius: 50%;
-  border-top: 2px solid $orange-1;
+  border-top: 2px solid $orange;
 
   animation: spin 2s linear infinite;
 }

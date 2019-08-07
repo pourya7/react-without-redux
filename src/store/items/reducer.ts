@@ -12,13 +12,10 @@ export default function items(state = initialState, action: any) {
 				...state,
 				{
 					id: Date.now(),
-					text: '',
+					text: action.payload,
 					completed: false,
 				},
 			];
-		}
-		case ITEMS.DELETE: {
-			return state.filter((item: any) => item.id !== action.payload);
 		}
 		case ITEMS.COMPLETE: {
 			return state.map((item: any) => {

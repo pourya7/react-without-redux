@@ -1,15 +1,9 @@
 import { ITEMS } from './types';
 
-export function addItem() {
+export function addItem(text: string) {
 	return {
-		type: ITEMS.ADD
-	};
-}
-
-export function deleteItem(id: number) {
-	return {
-		type: ITEMS.DELETE,
-		payload: id
+		type: ITEMS.ADD,
+		payload: text
 	};
 }
 

@@ -1,5 +1,5 @@
-export const asyncer = (dispatch: any) => (action: any) =>
-	typeof action === 'function' ?  action(dispatch) : dispatch(action);
+export const asyncer = (dispatch: any, state: any) => (action: any) =>
+	typeof action === 'function' ?  action(dispatch, state) : dispatch(action);
 
 export const logger = (
 	action: object,

@@ -1,0 +1,35 @@
+.todo-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 16px;
+
+  .todo-item-text {
+    margin-left: 8px;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+
+    &.completed {
+      position: relative;
+      color: $grey-2;
+
+      &::before {
+        content: "";
+        height: 2px;
+
+        position: absolute;
+        right: 0;
+        top: 50%;
+        left: 0;
+
+        background: linear-gradient(to right, $orange, $red);
+      }
+    }
+  }
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+}

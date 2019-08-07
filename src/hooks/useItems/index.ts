@@ -1,6 +1,6 @@
 import { useGlobalState } from 'store';
-import bindActions from 'store/bindActions';
 
+import bindActions from 'store/bindActions';
 import itemsReducer from 'store/items';
 
 const { actions } = itemsReducer;
@@ -17,7 +17,6 @@ const useItems: any = () => {
 	// List of Actions
 	const {
 		addItem,
-		deleteItem,
 		resetItems,
 		completeItem
 	} = actions;
@@ -25,7 +24,6 @@ const useItems: any = () => {
 	// Bind Actions
 	const itemsActions = bindActions({
 		addItem,
-		deleteItem,
 		resetItems,
 		completeItem
 	}, dispatch);
