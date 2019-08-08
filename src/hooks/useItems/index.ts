@@ -1,4 +1,4 @@
-import { useGlobalState } from 'store';
+import { useGlobalStore } from 'store';
 
 import bindActions from 'store/bindActions';
 import itemsReducer from 'store/items';
@@ -9,7 +9,7 @@ const { actions } = itemsReducer;
  * useItems Custom Hook
  */
 const useItems: any = () => {
-	const { state , dispatch } = useGlobalState();
+	const { state , dispatch } = useGlobalStore();
 
 	// List of Props
 	const { items } = state;

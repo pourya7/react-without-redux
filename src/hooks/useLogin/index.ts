@@ -1,4 +1,4 @@
-import { useGlobalState } from 'store';
+import { useGlobalStore } from 'store';
 
 import bindActions from 'store/bindActions';
 import loginReducer from 'store/login';
@@ -9,7 +9,7 @@ const { actions } = loginReducer;
  * useLogin Custom Hook
  */
 const useLogin: any = () => {
-	const { state, dispatch } = useGlobalState();
+	const { state, dispatch } = useGlobalStore();
 
 	// List of Props
 	const { login } = state;

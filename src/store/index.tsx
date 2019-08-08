@@ -10,9 +10,9 @@ import { IContextProps } from 'common/types';
 import { asyncer } from 'store/middlewares';
 import mainReducer, { initialState } from 'store/reducers';
 
-const StateContext = createContext({} as IContextProps);
+const GlobalStore = createContext({} as IContextProps);
 
-export const useGlobalState = () => useContext(StateContext);
+export const useGlobalStore = () => useContext(GlobalStore);
 
 export default function Provider({ children } : { children: React.ReactNode}) {
 	const [ state, dispatchBase ] = useReducer(mainReducer, initialState);
@@ -20,8 +20,8 @@ export default function Provider({ children } : { children: React.ReactNode}) {
 	const dispatch = useCallback(asyncer(dispatchBase, state), []);
 
 	return (
-		<StateContext.Provider value={{ state, dispatch }}>
+		<GlobalStore.Provider value={{ state, dispatch }}>
 			{children}
-		</StateContext.Provider>
+		</GlobalStore.Provider>
 	);
 }
