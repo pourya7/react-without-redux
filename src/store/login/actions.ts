@@ -28,7 +28,7 @@ export function handleLogin(userName: string, listName: string) {
 		try {
 			await fakeLogin(userName, listName);
 			dispatch(success(userName, listName));
-		} catch (error) {
+		} catch (error: any) {
 			dispatch(failed(error.response.data));
 		}
 	};
